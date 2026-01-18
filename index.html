@@ -1,30 +1,28 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head> 
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>--Memory Game--</h1>
-        <p>Click two matching cards to score points</p>
+<body> 
+    <header> 
+        <h1>--Memory Game--</h1> 
+        <p>Click two matching cards to score points</p> 
     </header>
-    <main>
-        <!-- Container for all cards -->
-        <div id="game-board" class="game-board"></div>
-        <!-- Display score and game messages -->
-        <div class="info">
-            <span id="score">Score: 0</span>
-            <span id="timer">Time: 60s</span>
+    <main> 
+        <div id="game-board" class="game-board"></div> <!-- empty container waiting for JavaScript to fill it with cards -->
+        <!-- this area shows the score and timer -->
+        <div class="info"> 
+            <span id="score">Score: 0</span> <!-- shows current score, starts at 0 -->
+            <span id="timer">Time: 60s</span> <!-- countdown timer, starts at 60 seconds -->
         </div>
-        <div id="message" class="message"></div>
+        <div id="message" class="message"></div> <!-- empty box for win/lose messages -->
     </main>
-    <footer>
-        <button id="restart-btn">Restart Game</button>
+    <footer> 
+        <button id="restart-btn">Restart Game</button> <!-- restart button -->
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js"></script> 
 </body>
 </html>
-

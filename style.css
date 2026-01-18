@@ -1,88 +1,81 @@
-/* Reset some default browser styles */
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; 
+    margin: 0; /* no extra space around elements */
+    padding: 0; /* no extra space inside elements */
     font-family: 'Arial', sans-serif;
 }
-
 body {
-    background-color: #f0f8ff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: flex-start;
+    background-color: #111827; /* dark_gray background */
+    display: flex; /* use flexbox layout makes centering easy*/
+    flex-direction: column; /* stack things vertically */
+    min-height: 100vh; /* at least fill the whole screen height */
+    align-items: center; /*center everything horizontally */
+    justify-content: flex-start; /*start at the top of the page */
 }
-
-/* Header styling */
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    color: white;
-    width: 100%;
+    text-align: center; /*center the text */
+    padding: 20px; /* add some breathing room around the text */
+    background-color: #0F172A; /*dark_navy background */
+    color:#38BDF8 ; /* soft_cyan text */
+    width: 100%; /* make it stretch across the whole page */
 }
-
-/* Game board layout */
 .game-board {
-    display: grid;
-    grid-template-columns: repeat(4, 100px); /* 4x4 grid */
-    gap: 15px;
-    margin: 30px 0;
+    display: grid; /* use grid layout for the cards */
+    grid-template-columns: repeat(4, 100px); /* make 4 columns, each 100px wide */
+    gap: 15px; /*put 15px space between cards */
+    margin: 30px 0; /* add space above and below the card grid */
 }
-
-/* Individual card styling */
 .card {
-    width: 100px;
-    height: 100px;
-    background-color: #ffd700;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    position: relative;
-    transform: scale(1);
-    transition: transform 0.3s;
+    width: 100px; /* cards are 100px wide */
+    height: 100px; /* and 100px tall */
+    background-color: #1E293B; /* DARK_SLATE color */
+    border-radius: 10px; /*rounded corners (looks friendlier) */
+    display: flex; /* use flexbox to center the symbol inside */
+    align-items: center; /* center vertically */
+    justify-content: center; /* center horizontally */
+    font-size: 40px; /* make the symbols nice and big */
+    color: #022C22; /* dark_green symbols */
+    cursor: pointer; /*show a hand cursor when hovering over cards */
+    position: relative; /* for positioning if we need it later */
+    transform: scale(1); /* normal size */
+    transition: transform 0.3s; /* make size changes smooth */
 }
-
-/* Flip animation */
 .card.flip {
-    background-color: #ffa500;
-    transform: rotateY(180deg);
+    background-color: #4cf6e2; /* change to cyan when flipped */
+    transform: rotateY(180deg); /* do a cool 3D flip animation */
 }
-
-/* Info area styling */
 .info {
-    display: flex;
-    justify-content: space-around;
-    width: 300px;
-    margin-bottom: 20px;
-    font-size: 18px;
+    display: flex; /*put score and timer side by side */
+    justify-content: space-around; /*space them out evenly */
+    width: 300px; /*make this area 300px wide */
+    margin-bottom: 20px; /*add space below it */
+    font-size: 18px; /* make the text a nice readable size */
+    color: #E5E7EB; /* lable color (Score / Time) */
 }
 
-/* Game message styling */
+#score,
+#time {
+    color: #FACC15; /* gold numbers */
+    font-weight: bold;
+}
 .message {
-    font-size: 24px;
-    color: red;
-    margin-top: 10px;
+    font-size: 24px; 
+    color: #38BDF8; /* cyan blue text */
+    margin-top: 10px; /*a little space above it */
 }
 #restart-btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #a30000 ;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    transition: transform 0.2s, background-color 0.2s;
-    margin-bottom: 20px;
+    padding: 10px 20px; /* make it a comfortable size to click */
+    font-size: 18px; /*readable text size */
+    cursor: pointer; /*show it's clickable */
+    background-color: #3B82F6; /*blue color */
+    color: #FFFFFF; /*white text */
+    border: none; /* no border */
+    border-radius: 10px; /*rounded corners*/
+    transition: transform 0.2s, background-color 0.2s; /*smooth hover effects */
+    margin-bottom: 20px; /* space below the button */
 }
-
 #restart-btn:hover {
-    background-color: #a30000;
-    transform: scale(1.05);
+    background-color: #2563EB;
+    transform: scale(1.05); /*slightly bigger when hovered */
 }
